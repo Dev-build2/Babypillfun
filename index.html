@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pillfun — Born from the Hype</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@500;700&display=swap');
+
+    :root {
+      --bg: #001903;
+      --accent: #00ff88;
+      --text: #ffffff;
+      --muted: #c4ffc4;
+      --glass: rgba(255, 255, 255, 0.05);
+      --border: rgba(0, 255, 136, 0.3);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      color: var(--text);
+      font-family: 'Rajdhani', sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at center, #002d10, var(--bg));
+      text-align: center;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    header {
+      padding: 70px 20px 40px;
+    }
+
+    .pfp {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 3px solid var(--accent);
+      box-shadow: 0 0 25px rgba(0, 255, 136, 0.5);
+      object-fit: cover;
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      color: var(--accent);
+      font-size: 3rem;
+      text-shadow: 0 0 25px var(--accent);
+    }
+
+    .subtitle {
+      margin-top: 10px;
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: var(--muted);
+    }
+
+    .tagline {
+      margin-top: 15px;
+      font-size: 1.1rem;
+      color: var(--text);
+    }
+
+    .royal {
+      margin-top: 8px;
+      font-size: 1.2rem;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    p {
+      margin: 25px auto 0;
+      max-width: 600px;
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* CONTRACT BOX */
+    .contract-box {
+      margin: 40px auto 15px;
+      background: var(--glass);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 15px 20px;
+      width: 90%;
+      max-width: 520px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      backdrop-filter: blur(10px);
+    }
+
+    .contract {
+      font-size: 0.9rem;
+      color: var(--muted);
+      word-break: break-all;
+    }
+
+    button {
+      background: var(--accent);
+      color: #001703;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      font-family: 'Rajdhani', sans-serif;
+      transition: 0.2s ease-in-out;
+    }
+
+    button:hover {
+      background: #00cc6e;
+    }
+
+    /* SOCIAL BUTTONS */
+    .social-links {
+      margin: 25px auto 0;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .social-links a {
+      background: var(--accent);
+      color: #001703;
+      padding: 10px 18px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: 0.2s ease;
+      text-transform: uppercase;
+    }
+
+    .social-links a:hover {
+      background: #00cc6e;
+      transform: translateY(-2px);
+      box-shadow: 0 0 15px rgba(0, 255, 136, 0.5);
+    }
+
+    /* CHART SECTION */
+    .chart-section {
+      margin: 60px auto 30px;
+      width: 90%;
+      max-width: 800px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 25px rgba(0, 255, 136, 0.3);
+      border: 1px solid var(--border);
+    }
+
+    iframe {
+      width: 100%;
+      height: 450px;
+      border: none;
+    }
+
+    /* TOKENOMICS */
+    .tokenomics {
+      margin: 60px auto;
+      padding: 30px 20px;
+      max-width: 800px;
+      background: var(--glass);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 20px rgba(0, 255, 136, 0.1);
+    }
+
+    .tokenomics h3 {
+      color: var(--accent);
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px var(--accent);
+    }
+
+    .tokenomics ul {
+      list-style: none;
+      text-align: left;
+      max-width: 500px;
+      margin: 0 auto;
+      line-height: 2;
+    }
+
+    .tokenomics li {
+      font-size: 1.1rem;
+    }
+
+    /* SOCIAL HUB */
+    .social-hub {
+      margin: 60px auto;
+      padding: 30px 20px;
+      max-width: 800px;
+      background: var(--glass);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 20px rgba(0, 255, 136, 0.15);
+    }
+
+    .social-hub h3 {
+      color: var(--accent);
+      margin-bottom: 20px;
+      font-size: 1.6rem;
+      text-shadow: 0 0 8px var(--accent);
+    }
+
+    footer {
+      margin: 60px 0 30px;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img class="pfp" src="ibaby.png"/>
+    <h1>$BABYPILLFUN</h1>
+    <div class="subtitle">Community Coin 💚</div>
+    <div class="tagline">Built on Solana ⚡</div>
+    <div class="royal">The Royal Pump Vision</div>
+
+    <p>
+      Pumpfun became so famous that she had an affair — and I was born.  
+      I’m $babypillfun, the next generation of memecoins with the same DNA,  
+      the same fire, but twice the chaos.  
+      I’m not here to play — I’m here to pump harder. 💥
+    </p>
+
+    <h2 style="margin-top:25px;">💚 Official Launchpad:
+      <a href="https://pump.fun" target="_blank">pump.fun</a>
+    </h2>
+
+    <div class="contract-box">
+      <div class="contract" id="contract">
+        CA: AC3kfERJqhNWnwedNLrfEtf7qtbye1kUofD6e7mqpump
+      </div>
+      <button onclick="copyCA()">Copy</button>
+    </div>
+  </header>
+
+  <section class="chart-section">
+    <iframe src="https://dexscreener.com/solana/AC3kfERJqhNWnwedNLrfEtf7qtbye1kUofD6e7mqpump"></iframe>
+  </section>
+
+  <div class="social-links">
+    <a href="https://pump.fun/coin/AC3kfERJqhNWnwedNLrfEtf7qtbye1kUofD6e7mqpump" target="_blank">Pump.Fun</a>
+    <a href="https://foundation.app/@babypillfun?username=babypillfun" target="_blank">Foundation</a>
+    <a href="https://dexscreener.com/solana/AC3kfERJqhNWnwedNLrfEtf7qtbye1kUofD6e7mqpump" target="_blank">Dexscreener</a>
+  </div>
+
+  <section class="tokenomics">
+    <h3>🧬 TOKENOMICS</h3>
+    <ul>
+      <li>💚 Total Supply: 1,000,000,000 $BABYPUMPFUN</li>
+      <li>💼 Dev hodls 5%</li>
+    </ul>
+  </section>
+
+  <!-- Social Hub Section -->
+  <section class="social-hub">
+    <h3>💚 Join the Community</h3>
+    <div class="social-links">
+      <a href="https://x.com/babypillfun/" target="_blank">Twitter</a>
+      <a href="https://t.co/kBw3QOiPC6" target="_blank">Telegram</a>
+      <a href="https://www.youtube.com/@babypillfun" target="_blank">YouTube</a>
+      <a href="https://www.tiktok.com/@babypillfun" target="_blank">TikTok</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 $Babypillfun — Born from Pump.fun 🚀
+  </footer>
+
+  <script>
+    function copyCA() {
+      const caText = document.getElementById("contract").innerText.replace("CA: ", "");
+      navigator.clipboard.writeText(caText);
+      alert("Contract Address Copied!");
+    }
+  </script>
+</body>
+</html>
